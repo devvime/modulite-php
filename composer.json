@@ -1,0 +1,31 @@
+{
+    "name": "devvime/modulite",
+    "description": "A Minimal and Expressive PHP Micro Framework",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Modulite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "devvime"
+        }
+    ],
+    "scripts": {
+        "new:migration": "vendor/bin/phinx create",
+        "new:seed": "vendor/bin/phinx seed:create",
+        "migrate": "vendor/bin/phinx migrate",
+        "rollback": "vendor/bin/phinx rollback",
+        "run:seed": "vendor/bin/phinx seed:run"
+    },
+    "require": {
+        "PHP": "^8.2.0",
+        "devvime/modpath": "^1.0.5",
+        "vlucas/phpdotenv": "^5.6",
+        "firebase/php-jwt": "^6.11",
+        "robmorgan/phinx": "^0.16.9",
+        "catfan/medoo": "^2.2",
+        "phpmailer/phpmailer": "^6.10"
+    }
+}
