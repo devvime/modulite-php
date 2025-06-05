@@ -1,12 +1,12 @@
 <?php
 
 use ModPath\Router\Router;
-use Modulite\Modules\PageNotFound\PageNotFoundController;
+use Modulite\Modules\System\Controller\SystemController;
 
 $app = new Router();
 
 $app->registerRoutes([
-    PageNotFoundController::class
+    SystemController::class
 ]);
 
 $app->dispatch();

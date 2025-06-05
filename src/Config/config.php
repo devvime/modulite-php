@@ -5,8 +5,13 @@ date_default_timezone_set("America/Sao_Paulo");
 setlocale(LC_ALL, 'pt_BR');
 
 # Dotenv
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(dirname(__DIR__)));
-$dotenv->load();
+try {
+    $dotenv = Dotenv\Dotenv::createImmutable(dirname(dirname(__DIR__)));
+    $dotenv->load();
+} catch (\Exception) {
+    echo '.env not found';
+    exit;
+}
 
 # Session
 session_set_cookie_params([
