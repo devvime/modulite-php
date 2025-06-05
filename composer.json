@@ -17,7 +17,8 @@
         "new:seed": "vendor/bin/phinx seed:create",
         "migrate": "vendor/bin/phinx migrate",
         "rollback": "vendor/bin/phinx rollback",
-        "run:seed": "vendor/bin/phinx seed:run"
+        "run:seed": "vendor/bin/phinx seed:run",
+        "test": "./vendor/bin/pest"
     },
     "require": {
         "PHP": "^8.2.0",
@@ -27,5 +28,13 @@
         "robmorgan/phinx": "^0.16.9",
         "catfan/medoo": "^2.2",
         "phpmailer/phpmailer": "^6.10"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
