@@ -30,7 +30,8 @@
         "phpmailer/phpmailer": "^6.10"
     },
     "require-dev": {
-        "pestphp/pest": "^3.8"
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-faker": "^3.0"
     },
     "config": {
         "allow-plugins": {
