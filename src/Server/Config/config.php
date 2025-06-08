@@ -6,7 +6,7 @@ setlocale(LC_ALL, 'pt_BR');
 
 # Dotenv
 try {
-    $dotenv = Dotenv\Dotenv::createImmutable(dirname(dirname(__DIR__)));
+    $dotenv = Dotenv\Dotenv::createImmutable(ROOT);
     $dotenv->load();
 } catch (\Exception) {
     echo '.env not found';

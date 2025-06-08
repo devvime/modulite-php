@@ -1,7 +1,7 @@
 <?php
 
 use ModPath\Router\Router;
-use Modulite\Modules\System\Controller\SystemController;
+use Modulite\Server\Modules\System\Controller\SystemController;
 
 $app = new Router();
 

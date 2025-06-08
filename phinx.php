@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/src/Config/config.php';
+require __DIR__ . '/src/Server/Config/config.php';
 
 return
 [
