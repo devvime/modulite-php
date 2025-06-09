@@ -1,5 +1,7 @@
 <?php
 
+use ModPath\View\View;
+
 # Timezone Settings
 date_default_timezone_set("America/Sao_Paulo");
 setlocale(LC_ALL, 'pt_BR');
@@ -33,3 +35,11 @@ define('DATABASE_PORT', $_ENV['DATABASE_PORT']);
 
 # JWT Secret
 define('SECRET', $_ENV['SECRET']);
+
+# Client SPA
+$_SERVER['SPA'] = [
+    "active" => true,
+    "dispatch" => function() {
+        View::render('Client/components/layout/index');
+    }
+];

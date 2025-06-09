@@ -4,13 +4,12 @@ namespace Modulite\Server\Modules\System\Service;
 
 class SystemService
 {
-    public static function homePage()
+    public static function endPointNotFound($request, $response)
     {
-        echo 'Hello World!';
-    }
-
-    public static function pageNotFound()
-    {
-        echo '404: Page not found.';
+        $response->status(404);
+        $response->json([
+            "status" => 404,
+            "message" => "End point not found"
+        ]);
     }
 }

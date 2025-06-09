@@ -7,15 +7,9 @@ use Modulite\Server\Modules\System\Service\SystemService;
 
 class SystemController
 {
-    #[Route(path: '', method: 'GET')]
-    public function homePage()
-    {
-        SystemService::homePage();
-    }
-
     #[Route(path: '/404', method: 'GET')]
-    public function pageNotFound()
+    public function endPointNotFound($request, $response)
     {
-        SystemService::pageNotFound();
+        SystemService::endPointNotFound($request, $response);
     }
 }

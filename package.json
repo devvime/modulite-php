@@ -1,0 +1,34 @@
+{
+  "name": "modulite-php",
+  "version": "1.0.0",
+  "description": "A Minimal and Expressive PHP Micro Framework",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run esbuild\" \"npm run sass\"",
+    "esbuild": "esbuild src/Client/index.js --bundle --minify --target=es2015 --outfile=public/dist/js/index.js --watch",
+    "sass": "sass --watch --style=compressed src/Client:public/dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devvime/modulite-php.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/devvime/modulite-php/issues"
+  },
+  "homepage": "https://github.com/devvime/modulite-php#readme",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.25.5",
+    "sass": "^1.89.1"
+  },
+  "dependencies": {
+    "blots": "^1.1.6"
+  }
+}

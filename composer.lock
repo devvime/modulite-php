@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c8f2262a2b1071a8a3d02b9b4c7d553",
+    "content-hash": "6492315c06dfa157f2e84da02c834506",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -408,16 +408,16 @@
         },
         {
             "name": "devvime/modpath",
-            "version": "1.0.5",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devvime/modpath-php.git",
-                "reference": "50c3e6f8beb45ced81799f6c7296b693caaefc9e"
+                "reference": "00dc78312a0e60960ea06bc120ebbb3688833d57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devvime/modpath-php/zipball/50c3e6f8beb45ced81799f6c7296b693caaefc9e",
-                "reference": "50c3e6f8beb45ced81799f6c7296b693caaefc9e",
+                "url": "https://api.github.com/repos/devvime/modpath-php/zipball/00dc78312a0e60960ea06bc120ebbb3688833d57",
+                "reference": "00dc78312a0e60960ea06bc120ebbb3688833d57",
                 "shasum": ""
             },
             "require-dev": {
@@ -442,9 +442,9 @@
             "description": "A Minimal and Expressive PHP Micro Routing Framework",
             "support": {
                 "issues": "https://github.com/devvime/modpath-php/issues",
-                "source": "https://github.com/devvime/modpath-php/tree/1.0.5"
+                "source": "https://github.com/devvime/modpath-php/tree/1.0.9"
             },
-            "time": "2025-06-05T04:33:59+00:00"
+            "time": "2025-06-09T07:29:04+00:00"
         },
         {
             "name": "firebase/php-jwt",
