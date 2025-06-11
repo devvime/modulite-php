@@ -12,4 +12,10 @@ class SystemController
     {
         SystemService::endPointNotFound($request, $response);
     }
+
+    #[Route(path: '/api/{view}', method: 'GET')]
+    public function renderView($request, $response)
+    {
+        SystemService::renderView($request, $response);
+    }
 }

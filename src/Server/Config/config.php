@@ -41,5 +41,6 @@ $_SERVER['SPA'] = [
     "active" => true,
     "dispatch" => function() {
         View::render('Client/components/layout/index');
+        View::render('../public/dist/templates');
     }
 ];
