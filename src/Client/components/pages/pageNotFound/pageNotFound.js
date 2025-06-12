@@ -1,12 +1,17 @@
 import { blots } from "blots";
-import { template } from "../../../helpers/template.js";
 
 export async function pageNotFound(ctx, next) {
+  const state = blots.component({}, async () => {
+    await render(state);
+  });
 
-  const component = await template("pages-pageNotFound");
-  const nav = await template("layout-nav");
+  await render(state);
+}
 
-  blots.draw("#app", component);
-  blots.draw("#nav", nav);
-  
+async function render(state) {
+  const component = await blots.template("pages-pageNotFound");
+  const nav = await blots.template("layout-nav");
+
+  blots.draw("app", component);
+  blots.draw("nav", nav);
 }

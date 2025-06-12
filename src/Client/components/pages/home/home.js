@@ -1,15 +1,23 @@
 import { blots } from "blots";
-import { template } from "../../../helpers/template.js";
 
 export async function home(ctx, next) {
+  const state = blots.component(
+    {
+      name: ctx.params.name,
+    },
+    async () => {
+      await render(state);
+    }
+  );
 
-  const component = await template("pages-home");
-  const nav = await template("layout-nav");
+  await render(state);
+}
 
-  blots.draw("#app", component, {
-    name: ctx.params.name,
-  });
+async function render(state) {
+  const component = await blots.template("pages-home");
+  const nav = await blots.template("layout-nav");
 
-  blots.draw("#nav", nav);
-  
+  blots.draw("app", component, state);
+
+  blots.draw("nav", nav);
 }

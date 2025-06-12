@@ -29,6 +29,6 @@
     "sass": "^1.89.1"
   },
   "dependencies": {
-    "blots": "^1.1.6"
+    "blots": "^1.1.8"
   }
 }

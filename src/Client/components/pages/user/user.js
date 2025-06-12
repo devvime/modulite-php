@@ -1,21 +1,29 @@
 import { blots, click } from "blots";
-import { template } from "../../../helpers/template.js";
-
-const state = blots.createObservable();
 
 export async function user(ctx, next) {
-  const component = await template("pages-user");
-  const nav = await template("layout-nav");
 
-  const data = {
-    name: ctx.params.name,
-    title: 'Hello world!'
-  }
+  const state = blots.component(
+    {
+      name: ctx.params.name,
+      title: "Hello world!",
+    },
+    async () => {
+      await render(state);
+    }
+  );
 
-  blots.draw("#app", component, data);
+  render(state);
+}
 
-  blots.draw("#nav", nav);
-  
-}   
+async function render(state) {
+  const component = await blots.template("pages-user");
+  const nav = await blots.template("layout-nav");
 
-state.subscribe(user);
+  blots.draw("app", component, state);
+  blots.draw("nav", nav);
+
+  click("btn-test", () => {
+    state.name = "Steve";
+    state.title = "Ok, deu certo!";
+  });
+}
