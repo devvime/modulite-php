@@ -1,11 +1,9 @@
-import { blots } from 'blots'
+import { Router } from "blots";
 
-import { home } from './components/pages/home/home.js'
-import { user } from './components/pages/user/user.js'
-import { pageNotFound } from './components/pages/pageNotFound/pageNotFound.js'
+import HomePage from "./components/pages/home/home-page";
 
-blots.route('/', home)
-blots.route('/user/:name', user)
-blots.route('*', pageNotFound)
+const router = new Router();
 
-blots.start()
+router.add("/", (params, query) => new HomePage(params, query));
+
+router.resolve();
